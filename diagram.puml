@@ -1,0 +1,27 @@
+@startuml
+title Ієрархія класів: Triad -> Triangle
+
+class Triad {
+    - double a
+    - double b
+    - double c
+    + Triad()
+    + Triad(double a, double b, double c)
+    + void setValues(double a, double b, double c)
+    + double sum()
+    + void print()
+}
+
+class Triangle {
+    + Triangle()
+    + Triangle(double a, double b, double c)
+    + bool isValid()
+    + void suggestFix()
+    + double area()
+    + void angles(double& alpha, double& beta, double& gamma)
+    + void printTriangle()
+}
+
+Triad <|-- Triangle
+
+@enduml
